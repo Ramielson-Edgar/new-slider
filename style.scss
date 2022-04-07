@@ -22,7 +22,7 @@ body {
   height: 100vh;
   line-height: 1.3;
 
-  background-color: rgb(158, 158, 158);
+  background-color:#fff;
   margin: 0;
 }
 
@@ -36,13 +36,16 @@ p {
   margin: 0 auto;
 }
 
- 
+
 
 .button-center {
   width: 100%;
   text-align: center;
 }
 
+.mt4-logo {
+  width: 200px;
+}
 
 
 a {
@@ -50,8 +53,19 @@ a {
   text-decoration: none;
 }
 
-// CARD BUTTON
+.nav {
+  list-style: none;
+  padding: 0;
+  max-width: 0;
+}
 
+.split {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// CARD BUTTON
 .account__button {
   position: relative;
   display: flex;
@@ -62,7 +76,7 @@ a {
   .btn-black {
     position: absolute;
     top: -80px;
-    left: 70px;
+    left: 40px;
 
     width: 200px;
     height: 50px;
@@ -91,7 +105,6 @@ a {
     }
   }
 }
-
 
 .fiat {
   background: linear-gradient(137.84deg, #ffd3aa -52.36%, #dcb3ff 37.27%, #ffffff 68.22%);
@@ -124,8 +137,6 @@ a {
     box-shadow: -1px -12px 50px #FEE1D7
   }
 }
-
-
 
 .standard {
   background: linear-gradient(170.13deg, rgba(16, 154, 229, 0) -18.9%, #109AE5 49.76%);
@@ -171,12 +182,44 @@ a {
   }
 }
 
+
+
+.info__list{
+  width: 200px;
+  height: 500px;
+
+  margin-top: 200px;
+  background-color:#ffffff;
+  backdrop-filter: blur(100px);
+  border-radius: 50px 50px 22px 20px;
+
+  .info__item:not(:last-child) {
+    border-bottom: 1px solid #fff;
+  }
+
+  .info__item {
+    width: 150px;
+    margin-bottom: 20px;
+    padding: 10px;
+
+    .info__heading {
+      font-size: 0.875rem;
+      color: #000;
+    }
+
+  }
+}
+
+
+.owl-carousel {
+  padding-left: 200px;
+}
+
+
 // ICON
 .slider-item {
   position: relative;
 }
-
-
 
 .icon-standard::after,
 .icon-standard::before,
@@ -197,7 +240,7 @@ a {
   content: "";
 
   top: -10%;
-  left: 35%;
+  left: 50%;
 
   width: 196px;
   height: 155px;
@@ -208,6 +251,7 @@ a {
   transform: translateY(0);
   transition: all .3s ease-in-out;
 }
+
 .slider-item:hover .icon-standard::before,
 .slider-item:hover .icon-premium::before,
 .slider-item:hover .icon-micro::before,
@@ -241,6 +285,9 @@ a {
   z-index: 3;
 }
 
+.icon-fiat::before {
+  left: 40%;
+}
 
 .icon-crypto::before {
   width: 196px;
@@ -249,20 +296,22 @@ a {
   background-image: url('../../icon-crypto.png');
 }
 
-
 .icon-cent::before {
   background-image: url('../../icon-cent.png');
 }
 
 .icon-standard::before {
-  left: 45%;
+  left: 60%;
+  width: 140px;
   z-index: 3;
-  background-image: url('../../knife.png');}
+  background-image: url('../../knife.png');
+}
 
 .icon-premium::before {
-  left: 45%;
-  z-index: 3;
+  left: 65%;
+  width: 130px;
   background-image: url('../../crown.png');
+  z-index: 5;
 }
 
 .icon-micro::before {
@@ -283,13 +332,13 @@ a {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  flex-basis: 340px;
-  width: 340px;
+  flex-basis: 270px;
+  width: 270px;
   height: 690px;
 
   border-radius: 50px;
   margin-top: 100px;
-  filter: drop-shadow(18px 20px 50px rgba(114, 100, 100, 0.2));
+  // filter: drop-shadow(18px 20px 50px rgba(114, 100, 100, 0.2));
   z-index: 1;
 
   &::before {
@@ -353,11 +402,12 @@ a {
 
   .account__table {
     position: relative;
-    background: rgba(255, 255, 255, 0.6);
+    height: 573px;
+    background: rgba(255, 255, 255, 0.850);
     border-top: 1px solid #FFFFFF;
     box-sizing: border-box;
     backdrop-filter: blur(20px);
-    border-radius: 50px 50px 22px 20px;
+    border-radius: 30px 30px 22px 20px;
     padding: 20px 20px 80px;
     z-index: 2;
 
@@ -365,20 +415,27 @@ a {
       position: relative;
       z-index: 1;
 
+      .account-row:not(:last-child) .account-value {
+        border-bottom: 1px solid #fff;
+      }
+
       .account-row {
         height: 10px;
+
         .account-value {
           width: 60%;
           font-weight: 600;
-          text-align: right;
+          font-size: 1.25rem;
+          text-align: left;
           color: #34227B;
-        }
 
-        .account-header,
-        .account-value {
-          font-size: 0.875rem;
-          padding: 16px 0;
-       
+          .mt4-logo {
+            width: 200px;
+          }
+
+          .allpips-logo {
+            width: 140px;
+          }
         }
       }
     }

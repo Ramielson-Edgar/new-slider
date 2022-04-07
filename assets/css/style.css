@@ -22,7 +22,7 @@ body {
   font-size: 14px;
   height: 100vh;
   line-height: 1.3;
-  background-color: #9e9e9e;
+  background-color: #fff;
   margin: 0;
 }
 
@@ -41,9 +41,31 @@ p {
   text-align: center;
 }
 
+.mt4-logo {
+  width: 200px;
+}
+
 a {
   display: block;
   text-decoration: none;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  max-width: 0;
+}
+
+.split {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .account__button {
@@ -66,7 +88,7 @@ a {
 .account__button .btn-black {
   position: absolute;
   top: -80px;
-  left: 70px;
+  left: 40px;
   width: 200px;
   height: 50px;
   cursor: pointer;
@@ -161,6 +183,35 @@ a {
           box-shadow: -1px -12px 50px rgba(219, 242, 255, 0.6);
 }
 
+.info__list {
+  width: 200px;
+  height: 500px;
+  margin-top: 200px;
+  background-color: #ffffff;
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
+  border-radius: 50px 50px 22px 20px;
+}
+
+.info__list .info__item:not(:last-child) {
+  border-bottom: 1px solid #fff;
+}
+
+.info__list .info__item {
+  width: 150px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.info__list .info__item .info__heading {
+  font-size: 0.875rem;
+  color: #000;
+}
+
+.owl-carousel {
+  padding-left: 200px;
+}
+
 .slider-item {
   position: relative;
 }
@@ -183,7 +234,7 @@ a {
   display: block;
   content: "";
   top: -10%;
-  left: 35%;
+  left: 50%;
   width: 196px;
   height: 155px;
   background-repeat: no-repeat;
@@ -228,6 +279,10 @@ a {
   z-index: 3;
 }
 
+.icon-fiat::before {
+  left: 40%;
+}
+
 .icon-crypto::before {
   width: 196px;
   height: 120px;
@@ -239,15 +294,17 @@ a {
 }
 
 .icon-standard::before {
-  left: 45%;
+  left: 60%;
+  width: 140px;
   z-index: 3;
   background-image: url("../../knife.png");
 }
 
 .icon-premium::before {
-  left: 45%;
-  z-index: 3;
+  left: 65%;
+  width: 130px;
   background-image: url("../../crown.png");
+  z-index: 5;
 }
 
 .icon-micro::before {
@@ -270,14 +327,12 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-preferred-size: 340px;
-      flex-basis: 340px;
-  width: 340px;
+  -ms-flex-preferred-size: 270px;
+      flex-basis: 270px;
+  width: 270px;
   height: 690px;
   border-radius: 50px;
   margin-top: 100px;
-  -webkit-filter: drop-shadow(18px 20px 50px rgba(114, 100, 100, 0.2));
-          filter: drop-shadow(18px 20px 50px rgba(114, 100, 100, 0.2));
   z-index: 1;
 }
 
@@ -335,13 +390,14 @@ a {
 
 .account__card .account__table {
   position: relative;
-  background: rgba(255, 255, 255, 0.6);
+  height: 573px;
+  background: rgba(255, 255, 255, 0.85);
   border-top: 1px solid #FFFFFF;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
-  border-radius: 50px 50px 22px 20px;
+  border-radius: 30px 30px 22px 20px;
   padding: 20px 20px 80px;
   z-index: 2;
 }
@@ -351,6 +407,10 @@ a {
   z-index: 1;
 }
 
+.account__card .account__table .account__body .account-row:not(:last-child) .account-value {
+  border-bottom: 1px solid #fff;
+}
+
 .account__card .account__table .account__body .account-row {
   height: 10px;
 }
@@ -358,13 +418,16 @@ a {
 .account__card .account__table .account__body .account-row .account-value {
   width: 60%;
   font-weight: 600;
-  text-align: right;
+  font-size: 1.25rem;
+  text-align: left;
   color: #34227B;
 }
 
-.account__card .account__table .account__body .account-row .account-header,
-.account__card .account__table .account__body .account-row .account-value {
-  font-size: 0.875rem;
-  padding: 16px 0;
+.account__card .account__table .account__body .account-row .account-value .mt4-logo {
+  width: 200px;
+}
+
+.account__card .account__table .account__body .account-row .account-value .allpips-logo {
+  width: 140px;
 }
 /*# sourceMappingURL=style.css.map */
