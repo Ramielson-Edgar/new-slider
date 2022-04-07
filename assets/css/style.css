@@ -67,52 +67,6 @@ a {
           align-items: center;
 }
 
-.account__button {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.account__button .btn-black {
-  position: absolute;
-  top: -80px;
-  left: 40px;
-  width: 200px;
-  height: 50px;
-  cursor: pointer;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: #fff;
-  background-color: #000;
-  border-radius: 50px;
-  padding: 15px 37px;
-  -webkit-box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.1), -4px -4px 30px rgba(255, 255, 255, 0.4), 4px 10px 30px rgba(65, 57, 57, 0.1);
-          box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.1), -4px -4px 30px rgba(255, 255, 255, 0.4), 4px 10px 30px rgba(65, 57, 57, 0.1);
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  z-index: 10;
-}
-
-.account__button .btn-black:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-}
-
 .fiat {
   background: linear-gradient(137.84deg, #ffd3aa -52.36%, #dcb3ff 37.27%, #ffffff 68.22%);
 }
@@ -165,7 +119,7 @@ a {
 }
 
 .pro {
-  background: radial-gradient(70% 40% at 70% 45%, #e592ff 0%, rgba(151, 105, 162, 0) 100%), radial-gradient(60% 50% at 50% 70%, #3bcdff 0%, rgba(66, 202, 255, 0) 100%), radial-gradient(80% 80% at 10% 90%, #83ffc9 0%, rgba(43, 245, 163, 0) 100%), radial-gradient(80% 80% at 90% 90%, #7fffc7 0%, rgba(43, 245, 163, 0) 100%), linear-gradient(342.55deg, #ff4800 45%, #ffc6af 131.36%);
+  background: radial-gradient(70% 40% at 70% 45%, #e592ff 0%, rgba(151, 105, 162, 0) 100%), radial-gradient(60% 50% at 50% 70%, #3bcdff 0%, rgba(66, 202, 255, 0) 100%), radial-gradient(80% 80% at 10% 90%, #83ffc9 0%, rgba(43, 245, 163, 0) 100%), radial-gradient(80% 80% at 90% 90%, #7fffc7 0%, rgba(43, 245, 163, 0) 100%), linear-gradient(342.55deg, red 45%, rgba(255, 0, 0, 0.556) 131.36%);
 }
 
 .pro .pro-shadow {
@@ -182,10 +136,51 @@ a {
           box-shadow: -1px -12px 50px rgba(219, 242, 255, 0.6);
 }
 
+.base-btn {
+  display: block;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  padding: 20px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 420px;
+  margin: 30px auto;
+  padding-bottom: 70px;
+}
+
+.btn-wrapper .btn-orange {
+  background-color: #dc3545;
+}
+
+.btn-wrapper .btn-green {
+  color: #2196f3;
+  border: 1px solid #2196f3;
+  background: transparent;
+}
+
 .info__list {
   position: relative;
   width: 200px;
-  margin-top: 200px;
+  margin-top: 230px;
   background-color: #ffffff;
   -webkit-backdrop-filter: blur(100px);
           backdrop-filter: blur(100px);
@@ -193,8 +188,20 @@ a {
   z-index: 3;
 }
 
-.info__list .info__item:not(:last-child) {
-  border-bottom: 1px solid #fff;
+.info__list .info__item {
+  position: relative;
+}
+
+.info__list .info__item::before {
+  position: absolute;
+  display: block;
+  content: '';
+  top: 32px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(188, 188, 188, 0.3);
+  z-index: -1;
 }
 
 .info__list .info__item {
@@ -332,7 +339,8 @@ a {
   -ms-flex-preferred-size: 270px;
       flex-basis: 270px;
   width: 270px;
-  height: 690px;
+  height: 600px;
+  padding: 0 2px 3px;
   border-radius: 50px;
   margin-top: 100px;
   z-index: 1;
@@ -342,15 +350,13 @@ a {
   position: absolute;
   display: block;
   content: "";
-  top: -30%;
+  top: -24%;
   left: -60%;
   width: 560px;
   height: 560px;
   opacity: 0.9;
   background-image: url("../../circle-set.svg");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   z-index: -1;
 }
 
@@ -366,7 +372,6 @@ a {
   opacity: 0.3;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
   z-index: -1;
 }
 
@@ -394,13 +399,13 @@ a {
   position: relative;
   height: 573px;
   background: rgba(255, 255, 255, 0.85);
-  border-top: 1px solid #ffffff;
+  border: 1px solid #ffffff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
-  border-radius: 30px 30px 22px 20px;
-  padding: 20px 20px 80px;
+  border-radius: 20px 24px 47px 47px;
+  padding: 10px 0 0 0;
   z-index: 2;
 }
 
@@ -423,6 +428,7 @@ a {
   font-size: 1rem;
   text-align: left;
   color: #34227b;
+  padding: 10px;
 }
 
 .account__card .account__table .account__body .account-row .account-value .mt4-logo {

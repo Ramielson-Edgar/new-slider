@@ -60,46 +60,7 @@ a {
   align-items: center;
 }
 
-// CARD BUTTON
-.account__button {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .btn-black {
-    position: absolute;
-    top: -80px;
-    left: 40px;
-
-    width: 200px;
-    height: 50px;
-    cursor: pointer;
-    text-align: center;
-
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: #fff;
-
-    background-color: #000;
-    border-radius: 50px;
-    padding: 15px 37px;
-
-    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.1), -4px -4px 30px rgba(255, 255, 255, 0.4),
-      4px 10px 30px rgba(65, 57, 57, 0.1);
-    transform: translateY(0);
-    transition: all 0.3s ease-in-out;
-
-    z-index: 10;
-
-    &:hover {
-      transform: translateY(-5px);
-    }
-  }
-}
-
+// ICON BUTTON
 .fiat {
   background: linear-gradient(137.84deg, #ffd3aa -52.36%, #dcb3ff 37.27%, #ffffff 68.22%);
 
@@ -156,7 +117,7 @@ a {
     radial-gradient(60% 50% at 50% 70%, #3bcdff 0%, rgba(66, 202, 255, 0) 100%),
     radial-gradient(80% 80% at 10% 90%, #83ffc9 0%, rgba(43, 245, 163, 0) 100%),
     radial-gradient(80% 80% at 90% 90%, rgb(127, 255, 199) 0%, rgba(43, 245, 163, 0) 100%),
-    linear-gradient(342.55deg, rgb(255, 72, 0) 45%, rgb(255, 198, 175) 131.36%);
+    linear-gradient(342.55deg, rgb(255, 0, 0) 45%, rgba(255, 0, 0, 0.556) 131.36%);
 
   .pro-shadow {
     box-shadow: -1px -12px 50px #ffefe9;
@@ -171,18 +132,74 @@ a {
   }
 }
 
+.base-btn {
+  display: block;
+
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+
+  cursor: pointer;
+  padding: 20px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 420px;
+
+  margin: 30px auto;
+  padding-bottom: 70px;
+
+  .btn-orange {
+    background-color: #dc3545;
+  }
+
+  .btn-green {
+    color: #2196f3;
+    border: 1px solid #2196f3;
+    background: transparent;
+  }
+}
+
+
+
+
 .info__list {
   position: relative;
   width: 200px;
 
-  margin-top: 200px;
+  margin-top: 230px;
   background-color: #ffffff;
   backdrop-filter: blur(100px);
   border-radius: 50px 50px 22px 20px;
   z-index: 3;
 
-  .info__item:not(:last-child) {
-    border-bottom: 1px solid #fff;
+  .info__item {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+
+      top: 32px;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: rgba(188, 188, 188, .3);
+      z-index: -1;
+
+    }
+
   }
 
   .info__item {
@@ -318,7 +335,8 @@ a {
   flex-basis: 270px;
 
   width: 270px;
-  height: 690px;
+  height: 600px;
+  padding: 0 2px 3px;
 
   border-radius: 50px;
   margin-top: 100px;
@@ -330,7 +348,7 @@ a {
 
     content: "";
 
-    top: -30%;
+    top: -24%;
     left: -60%;
 
     width: 560px;
@@ -339,8 +357,6 @@ a {
 
     background-image: url("../../circle-set.svg");
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     z-index: -1;
   }
 
@@ -359,7 +375,6 @@ a {
     opacity: 0.3;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
     z-index: -1;
   }
 
@@ -385,11 +400,11 @@ a {
     position: relative;
     height: 573px;
     background: rgba(255, 255, 255, 0.85);
-    border-top: 1px solid #ffffff;
+    border: 1px solid #ffffff;
     box-sizing: border-box;
     backdrop-filter: blur(20px);
-    border-radius: 30px 30px 22px 20px;
-    padding: 20px 20px 80px;
+    border-radius: 20px 24px 47px 47px;
+    padding: 10px 0 0 0;
     z-index: 2;
 
     .account__body {
@@ -409,6 +424,7 @@ a {
           font-size: 1rem;
           text-align: left;
           color: #34227b;
+          padding: 10px;
 
           .mt4-logo {
             width: 200px;
@@ -422,3 +438,6 @@ a {
     }
   }
 }
+
+
+@media (max-width: 991.98px) {}

@@ -28,19 +28,33 @@
   <body>
     <div class="account-info split">
       <ul class="nav info__list">
-        <li class="info__item"><p class="info__heading">First Deposit</p></li>
-        <li class="info__item"><p class="info__heading">Execution Type</p></li>
-        <li class="info__item"><p class="info__heading">Instruments</p></li>
-        <li class="info__item"><p class="info__heading">Typical Spreads</p></li>
+        <li class="info__item">
+          <p class="info__heading">First Deposit</p>
+        </li>
+        <li class="info__item">
+          <p class="info__heading">Execution Type</p>
+        </li>
+        <li class="info__item">
+          <p class="info__heading">Instruments</p>
+        </li>
+        <li class="info__item">
+          <p class="info__heading">Typical Spreads</p>
+        </li>
         <li class="info__item">
           <p class="info__heading">Min. Volume lots</p>
         </li>
-        <li class="info__item"><p class="info__heading">Max. Leverage</p></li>
-        <li class="info__item"><p class="info__heading">Social Trading</p></li>
-        <li class="info__item"><p class="info__heading">Platform</p></li>
+        <li class="info__item">
+          <p class="info__heading">Max. Leverage</p>
+        </li>
+        <li class="info__item">
+          <p class="info__heading">Social Trading</p>
+        </li>
+        <li class="info__item">
+          <p class="info__heading">Platform</p>
+        </li>
       </ul>
-      <div class="owl-carousel">
-        <div class="slider-item">
+      <div id="type-account" class="owl-carousel">
+        <div id="fiat" class="slider-item">
           <span class="icon-fiat"></span>
           <div class="account__card fiat">
             <header class="account__header">
@@ -74,6 +88,9 @@
                   <td class="account-value">1:100</td>
                 </tr>
                 <tr class="account-row">
+                  <td class="account-value">Available</td>
+                </tr>
+                <tr class="account-row">
                   <td class="account-value">
                     <img
                       class="allpips-logo"
@@ -86,14 +103,10 @@
                 </tr>
               </tbody>
             </table>
-
-            <div class="account__button">
-              <a class="btn-black" href="#">Learn More</a>
-            </div>
           </div>
         </div>
 
-        <div class="slider-item">
+        <div id="crypto" class="slider-item">
           <span class="icon-crypto"></span>
           <div class="account__card crypto">
             <header class="account__header">
@@ -127,6 +140,9 @@
                   <td class="account-value text-right">1:100</td>
                 </tr>
                 <tr class="account-row">
+                  <td class="account-value">Available</td>
+                </tr>
+                <tr class="account-row">
                   <td class="account-value text-right">
                     <img
                       class="allpips-logo"
@@ -139,14 +155,10 @@
                 </tr>
               </tbody>
             </table>
-
-            <div class="account__button">
-              <a class="btn-black" href="#">Learn More</a>
-            </div>
           </div>
         </div>
 
-        <div class="slider-item">
+        <div id="cent" class="slider-item">
           <span class="icon-cent"></span>
           <div class="account__card cent">
             <header class="account__header">
@@ -180,6 +192,9 @@
                   <td class="account-value text-right">1:100</td>
                 </tr>
                 <tr class="account-row">
+                  <td class="account-value">Available</td>
+                </tr>
+                <tr class="account-row">
                   <td class="account-value text-right">
                     <img
                       class="allpips-logo"
@@ -192,14 +207,10 @@
                 </tr>
               </tbody>
             </table>
-
-            <div class="account__button">
-              <a class="btn-black" href="#">Learn More</a>
-            </div>
           </div>
         </div>
 
-        <div class="slider-item">
+        <div id="standard" class="slider-item">
           <span class="icon-standard"></span>
           <div class="account__card standard">
             <header class="account__header">
@@ -229,6 +240,9 @@
                 <tr class="account-row">
                   <td class="account-value text-right">1:500</td>
                 </tr>
+                <tr class="account-row">
+                  <td class="account-value">not Available</td>
+                </tr>
 
                 <tr class="account-row">
                   <td class="account-value text-right">
@@ -243,14 +257,10 @@
                 </tr>
               </tbody>
             </table>
-
-            <div class="account__button">
-              <a class="btn-black" href="#">Learn More</a>
-            </div>
           </div>
         </div>
 
-        <div class="slider-item">
+        <div id="premium" class="slider-item">
           <span class="icon-premium"></span>
           <div class="account__card premium">
             <header class="account__header">
@@ -281,6 +291,9 @@
                   <td class="account-value text-right">1:500</td>
                 </tr>
                 <tr class="account-row">
+                  <td class="account-value">not Available</td>
+                </tr>
+                <tr class="account-row">
                   <td class="account-value text-right">
                     <img
                       class="mt4-logo"
@@ -293,14 +306,10 @@
                 </tr>
               </tbody>
             </table>
-
-            <div class="account__button">
-              <a class="btn-black" href="#">Learn More</a>
-            </div>
           </div>
         </div>
 
-        <div class="slider-item">
+        <div id="pro" class="slider-item">
           <span class="icon-pro"></span>
           <div class="account__card pro">
             <header class="account__header">
@@ -331,6 +340,9 @@
                   <td class="account-value text-right">1:500</td>
                 </tr>
                 <tr class="account-row">
+                  <td class="account-value">not Available</td>
+                </tr>
+                <tr class="account-row">
                   <td class="account-value text-right">
                     <img
                       class="mt4-logo"
@@ -343,14 +355,10 @@
                 </tr>
               </tbody>
             </table>
-
-            <div class="account__button">
-              <a class="btn-black" href="#">Learn More</a>
-            </div>
           </div>
         </div>
 
-        <div class="slider-item">
+        <div id="micro" class="slider-item">
           <span class="icon-micro"></span>
           <div class="account__card micro">
             <header class="account__header">
@@ -379,6 +387,9 @@
                   <td class="account-value text-right">1:500</td>
                 </tr>
                 <tr class="account-row">
+                  <td class="account-value">not Available</td>
+                </tr>
+                <tr class="account-row">
                   <td class="account-value text-right">
                     <img
                       class="mt4-logo"
@@ -391,27 +402,26 @@
                 </tr>
               </tbody>
             </table>
-
-            <div class="account__button">
-              <a class="btn-black" href="#">Learn More</a>
-            </div>
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="btn-wrapper">
+      <a class="btn-orange base-btn" href="#">Open Trading Accoun</a>
+      <a class="btn-green base-btn" href="#">Open Demo Account</a>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="owl.carousel.js"></script>
     <script>
       $(document).ready(function () {
-        $(".owl-carousel").owlCarousel({
-          loop: true,
+        $("#type-account").owlCarousel({
+          loop: false,
           items: 3,
-          dots: true,
           margin: 20,
-          animateIn: true,
           autoWidth: true,
-          nav: true,
+          dots: true,
         });
       });
     </script>
