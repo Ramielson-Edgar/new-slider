@@ -177,6 +177,15 @@ a {
 }
 
 
+
+.icon-standard::after,
+.icon-standard::before,
+.icon-premium::after,
+.icon-premium::before,
+.icon-micro::after,
+.icon-micro::before,
+.icon-pro::after,
+.icon-pro::before,
 .icon-cent::after,
 .icon-cent::before,
 .icon-crypto::before,
@@ -199,8 +208,10 @@ a {
   transform: translateY(0);
   transition: all .3s ease-in-out;
 }
-
-
+.slider-item:hover .icon-standard::before,
+.slider-item:hover .icon-premium::before,
+.slider-item:hover .icon-micro::before,
+.slider-item:hover .icon-pro::before,
 .slider-item:hover .icon-cent::before,
 .slider-item:hover .icon-crypto::before,
 .slider-item:hover .icon-fiat::before {
@@ -208,6 +219,11 @@ a {
 }
 
 
+
+.icon-standard::after,
+.icon-premium::after,
+.icon-micro::after,
+.icon-pro::after,
 .icon-cent::after,
 .icon-crypto::after,
 .icon-fiat::after {
@@ -237,6 +253,29 @@ a {
 .icon-cent::before {
   background-image: url('../../icon-cent.png');
 }
+
+.icon-standard::before {
+  left: 45%;
+  z-index: 3;
+  background-image: url('../../knife.png');}
+
+.icon-premium::before {
+  left: 45%;
+  z-index: 3;
+  background-image: url('../../crown.png');
+}
+
+.icon-micro::before {
+  z-index: 3;
+  background-image: url('../../coin.png');
+}
+
+.icon-pro::before {
+  z-index: 3;
+  background-image: url('../../helm.png');
+}
+
+
 
 
 .account__card {
