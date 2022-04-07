@@ -240,7 +240,7 @@ a {
   content: "";
 
   top: -10%;
-  left: 50%;
+  left: 35%;
 
   width: 196px;
   height: 155px;
@@ -287,11 +287,14 @@ a {
 
 .icon-fiat::before {
   left: 40%;
+  width: 170px;
 }
 
 .icon-crypto::before {
-  width: 196px;
+  width: 156px;
   height: 120px;
+  left: 54%;
+  top: -5%;
 
   background-image: url('../../icon-crypto.png');
 }
@@ -301,25 +304,28 @@ a {
 }
 
 .icon-standard::before {
-  left: 60%;
+  left: 50%;
   width: 140px;
   z-index: 3;
   background-image: url('../../knife.png');
 }
 
 .icon-premium::before {
-  left: 65%;
+  left: 57%;
   width: 130px;
   background-image: url('../../crown.png');
   z-index: 5;
 }
 
 .icon-micro::before {
+  width: 160px;
+  left: 47%;
   z-index: 3;
   background-image: url('../../coin.png');
 }
 
 .icon-pro::before {
+    width: 160px;
   z-index: 3;
   background-image: url('../../helm.png');
 }
@@ -391,7 +397,7 @@ a {
   .header-card {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
-    font-size: 3.125rem;
+    font-size: 2.125rem;
     color: #34227b;
   }
 
