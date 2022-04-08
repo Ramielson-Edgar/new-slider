@@ -465,13 +465,32 @@ table {
   width: 140px;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .icon-fiat::before {
-    left: 35%;
+    left: 30%;
   }
   .icon-micro::before,
   .icon-crypto::before {
-    left: 42%;
+    left: 20%;
+  }
+  .owl-item > .slider-item {
+    width: 377px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .icon-micro::before,
+  .icon-crypto::before {
+    left: 32%;
+  }
+  .icon-fiat::before {
+    left: 30%;
+  }
+  .icon-cent::before,
+  .icon-standard::before,
+  .icon-premium::before,
+  .icon-pro::before {
+    left: 35%;
   }
 }
 /*# sourceMappingURL=style.css.map */
