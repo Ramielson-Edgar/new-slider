@@ -67,6 +67,11 @@ a {
           align-items: center;
 }
 
+table {
+  margin: 0;
+  padding: 0;
+}
+
 .fiat {
   background: linear-gradient(137.84deg, #ffd3aa -52.36%, #dcb3ff 37.27%, #ffffff 68.22%);
 }
@@ -179,12 +184,23 @@ a {
 
 .info__list {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-right: auto;
   width: 200px;
   margin-top: 230px;
   background-color: #ffffff;
-  -webkit-backdrop-filter: blur(100px);
-          backdrop-filter: blur(100px);
-  border-radius: 50px 50px 22px 20px;
   z-index: 3;
 }
 
@@ -195,8 +211,8 @@ a {
 .info__list .info__item::before {
   position: absolute;
   display: block;
-  content: '';
-  top: 32px;
+  content: "";
+  top: 30px;
   left: 0;
   width: 100%;
   height: 1px;
@@ -206,8 +222,7 @@ a {
 
 .info__list .info__item {
   width: 210px;
-  margin-bottom: 30px;
-  padding: 0 20px;
+  padding: 10px;
 }
 
 .info__list .info__item .info__heading {
@@ -216,8 +231,13 @@ a {
   color: #000;
 }
 
+.account__wrapper {
+  padding-left: 90px;
+}
+
 .owl-carousel {
-  padding-left: 220px;
+  padding-left: 200px;
+  z-index: 10;
 }
 
 .slider-item {
@@ -243,6 +263,8 @@ a {
   content: "";
   top: -5%;
   left: 50%;
+  -webkit-transform: translate(-50% -50%);
+          transform: translate(-50% -50%);
   width: 120px;
   height: 120px;
   background-repeat: no-repeat;
@@ -340,7 +362,6 @@ a {
       flex-basis: 270px;
   width: 270px;
   height: 600px;
-  padding: 0 2px 3px;
   border-radius: 50px;
   margin-top: 100px;
   z-index: 1;
@@ -397,14 +418,15 @@ a {
 
 .account__card .account__table {
   position: relative;
-  height: 573px;
+  height: 560px;
   background: rgba(255, 255, 255, 0.85);
-  border: 1px solid #ffffff;
+  border-top: 2px solid #ffffff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
-  border-radius: 20px 24px 47px 47px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   padding: 10px 0 0 0;
   z-index: 2;
 }
@@ -416,6 +438,10 @@ a {
 
 .account__card .account__table .account__body .account-row:not(:last-child) .account-value {
   border-bottom: 1px solid #fff;
+}
+
+.account__card .account__table .account__body .account-row:nth-child(3) {
+  height: 74px;
 }
 
 .account__card .account__table .account__body .account-row {
@@ -437,5 +463,15 @@ a {
 
 .account__card .account__table .account__body .account-row .account-value .allpips-logo {
   width: 140px;
+}
+
+@media (max-width: 575.98px) {
+  .icon-fiat::before {
+    left: 35%;
+  }
+  .icon-micro::before,
+  .icon-crypto::before {
+    left: 42%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
