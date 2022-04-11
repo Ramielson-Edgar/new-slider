@@ -607,6 +607,10 @@ a {
 
     a {width: 207px;}
   }
+
+  .owl-nav {
+    top: 30%;
+  }
 }
 
 @media (max-width:320px) {
@@ -621,11 +625,18 @@ a {
     left: 65%;
     top: -30px;
   }
-  .btn-wrapper{
-    gap: 10px;
+  .btn-wrapper > a { margin: 10px;}
+
+
+  .owl-theme {
+    .owl-dots {
+        margin-top: 30px;
+    }
   }
-  
+ 
 }
+
+
 
 @supports (backdrop-filter: blur(1rem)) {
   .account__table {
