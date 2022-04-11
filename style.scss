@@ -623,6 +623,12 @@ a {
     height: 70px;
   }
 
+  .icon-fiat::before {
+    width: 150px;
+    height: 80px;
+    left: 40%;
+  }
+
   .owl-theme {
     .owl-dots {
         margin-top: 40px !important;
