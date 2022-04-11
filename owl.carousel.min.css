@@ -191,7 +191,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    z-index: 10000000;
+    z-index: 10000;
 }
 
 .bi-arrow-left-short {
@@ -201,11 +201,13 @@
 .bi-arrow-right-short::before,
 .bi-arrow-left-short::before {
     margin: 5px;
+    z-index: 10000;
 }
 
 .bi-arrow-right-short {
     position: absolute;
     right: 3%;
+    z-index: 10000;
 }
 
 .bi {

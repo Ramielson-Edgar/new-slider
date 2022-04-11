@@ -124,8 +124,8 @@ a {
 }
 
 .pro .pro-shadow {
-  -webkit-box-shadow: -1px -12px 50px #ffefe9;
-          box-shadow: -1px -12px 50px #ffefe9;
+  -webkit-box-shadow: -1px -12px 50px -10px #ffefe9;
+          box-shadow: -1px -12px 50px -10px #ffefe9;
 }
 
 .micro {
@@ -258,6 +258,10 @@ a {
 .slider-item:hover {
   -webkit-transform: translateY(-15px);
           transform: translateY(-15px);
+}
+
+.slider-item a {
+  color: #140d2d;
 }
 
 .slider-item:hover .account__card {
@@ -582,8 +586,13 @@ a {
     padding: 10px 0;
     text-align: right;
   }
-  .bi-arrow-left-short {
-    left: 0;
+  .owl-nav {
+    top: 37%;
+  }
+  .owl-nav .bi-arrow-left-short {
+    top: 100px;
+    right: 3%;
+    left: unset;
   }
   .owl-dots {
     margin-right: 0;
