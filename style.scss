@@ -299,6 +299,7 @@ a {
 .icon-fiat::before {
   background-image: url("../../icon-fiat.png");
   z-index: 3;
+  left: 40%;
 }
 
 .icon-fiat::before {
@@ -308,6 +309,7 @@ a {
 .icon-crypto::before {
   width: 150px;
   height: 120px;
+  left: 45%;
 
   background-image: url("../../icon-crypto.png");
 }
@@ -318,14 +320,14 @@ a {
 
 .icon-standard::before {
   width: 140px;
-  left: 57%;
+  left: 54%;
   z-index: 3;
   background-image: url("../../knife.png");
 }
 
 .icon-premium::before {
   width: 130px;
-  left: 57%;
+  left: 55%;
   background-image: url("../../crown.png");
   z-index: 5;
 }
