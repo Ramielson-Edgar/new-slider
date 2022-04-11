@@ -20,7 +20,7 @@ body {
   height: 100vh;
   line-height: 1.3;
 
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   margin: 0;
 }
 
@@ -404,7 +404,7 @@ a {
     position: relative;
     height: 480px;
 
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.8);
     border-top: 2px solid #ffffff;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
@@ -543,7 +543,7 @@ a {
       .account__table {
         .account__body {
           .account-row {
-            grid-template-columns: 100px 1fr;
+            grid-template-columns: 120px 1fr;
     
             .account-header {
               display: block;
