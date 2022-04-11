@@ -315,6 +315,7 @@ a {
 }
 
 .icon-cent::before {
+  left: 50%;
   background-image: url("../../icon-cent.png");
 }
 
@@ -607,7 +608,6 @@ a {
 }
 
 @media (max-width:320px) {
-
   .icon-standard::before,
   .icon-micro::before,
   .icon-pro::before,
@@ -618,6 +618,9 @@ a {
     height: 70px;
     left: 65%;
     top: -30px;
+  }
+  .btn-wrapper{
+    gap: 10px;
   }
   
 }
