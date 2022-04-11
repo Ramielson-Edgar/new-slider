@@ -366,9 +366,10 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
   border-radius: 30px;
   margin-top: 100px;
+  border: 2px solid #fff;
+  padding: 0 1px 1px;
   z-index: -1;
 }
 
@@ -402,15 +403,11 @@ a {
 }
 
 .account__card .account__header {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   padding: 20px;
 }
 
 .account__card .header-account,
 .account__card .header-card {
-  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: clamp(1.25rem, calc(0.96rem + 1.46vw), 2rem);
   color: #34227b;
@@ -422,13 +419,15 @@ a {
 }
 
 .account__card .account__table {
+  position: relative;
   height: 480px;
   background: rgba(255, 255, 255, 0.88);
-  border-top: 2px solid #ffffff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  border: 2px solid #ffffff;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  border-bottom-left-radius: 27px;
+  border-bottom-right-radius: 27px;
+  z-index: 10;
 }
 
 .account__card .account__table .account__body {
