@@ -157,14 +157,14 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 420px;
   margin: 30px auto;
+  gap: 30px;
   padding-bottom: 70px;
 }
 
@@ -629,26 +629,21 @@ a {
             align-items: center;
     max-width: 280px;
     margin: 0 auto;
-    margin-top: 40px !important;
   }
 }
 
 @media (max-width: 320px) {
-  .icon-standard::before,
+  .icon-crypto::before,
   .icon-micro::before,
   .icon-pro::before,
+  .icon-premium::before,
+  .icon-standard::before,
   .icon-cent::before,
-  .icon-crypto::before,
-  .icon-fiat::before,
-  .icon-premium::before {
-    top: -10px;
-    left: 60%;
-    height: 70px;
-  }
   .icon-fiat::before {
-    width: 150px;
-    height: 80px;
+    width: 50%;
+    height: 100px;
     left: 50%;
+    top: -3%;
   }
 }
 

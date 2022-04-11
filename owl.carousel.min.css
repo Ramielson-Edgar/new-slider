@@ -225,3 +225,5 @@
 .bi:hover {
     transform: scale(.8);
 }
+
+.owl-dots {margin-top: 40px !important;}
