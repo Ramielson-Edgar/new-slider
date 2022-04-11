@@ -199,12 +199,12 @@ a {
     align-items: center;
     text-align: left;
 
-    background: rgba(255, 255, 255, 0.89);
-    backdrop-filter: blur(100px);
+    background: rgb(255, 255, 255);
 
     width: 180px;
     padding: 15px 0;
   }
+
 
   .info__heading {
     font-size: 14px;
@@ -381,7 +381,7 @@ a {
     opacity: 0.3;
     background-repeat: no-repeat;
     background-position: center;
-    z-index: -1;
+    z-index: -2;
   }
 
   .account__header {
@@ -404,10 +404,9 @@ a {
 
   .account__table {
     height: 480px;
-    background: rgba(255, 255, 255, 0.89);
+    background: rgba(255, 255, 255, 0.880);
     border-top: 2px solid #ffffff;
     box-sizing: border-box;
-    backdrop-filter: blur(20px);
 
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
@@ -605,6 +604,13 @@ a {
     height: 70px;
     left: 65%;
     top: -30px;
+  }
+  
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+  .account__table {
+      backdrop-filter: blur(1rem)
   }
   
 }
