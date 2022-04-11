@@ -388,8 +388,8 @@ a {
   margin-top: 100px;
   border: 2px solid #fff;
   padding: 0 1px 1px;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   z-index: -1;
 }
 
@@ -617,6 +617,20 @@ a {
   .btn-wrapper a {
     width: 207px;
   }
+  .owl-theme .owl-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 280px;
+    margin: 0 auto;
+    margin-top: 40px !important;
+  }
 }
 
 @media (max-width: 320px) {
@@ -634,10 +648,7 @@ a {
   .icon-fiat::before {
     width: 150px;
     height: 80px;
-    left: 40%;
-  }
-  .owl-theme .owl-dots {
-    margin-top: 40px !important;
+    left: 50%;
   }
 }
 
