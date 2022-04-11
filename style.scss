@@ -227,7 +227,16 @@ a {
 // ICON
 .slider-item {
   position: relative;
+  transform: translateY(0);
+  background-color: transparent;
+  transition: all 0.3s ease-in;
+
+  &:hover{
+    transform: translateY(-15px);
+  }
 }
+
+.slider-item:hover .account__card {box-shadow: 30px 3px 50px -40px  rgb(116, 116, 116);}
 
 .icon-standard::after,
 .icon-standard::before,
@@ -345,6 +354,7 @@ a {
   margin-top: 100px;
   border: 2px solid #fff;
   padding: 0 1px 1px;
+  transition: all .2s ease-in-out;
 
   z-index: -1;
 

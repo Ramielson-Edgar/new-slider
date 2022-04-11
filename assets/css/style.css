@@ -248,6 +248,21 @@ a {
 
 .slider-item {
   position: relative;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  background-color: transparent;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.slider-item:hover {
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+
+.slider-item:hover .account__card {
+  -webkit-box-shadow: 15px 3px 50px -40px #747474;
+          box-shadow: 15px 3px 50px -40px #747474;
 }
 
 .icon-standard::after,
@@ -370,6 +385,8 @@ a {
   margin-top: 100px;
   border: 2px solid #fff;
   padding: 0 1px 1px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   z-index: -1;
 }
 
