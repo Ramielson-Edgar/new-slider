@@ -421,12 +421,12 @@ a {
 .account__card .account__table {
   position: relative;
   height: 480px;
-  background: rgba(255, 255, 255, 0.88);
-  border: 2px solid #ffffff;
+  background: rgba(255, 255, 255, 0.7);
+  border-top: 2px solid #ffffff;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  border-bottom-left-radius: 27px;
-  border-bottom-right-radius: 27px;
+  border-bottom-left-radius: 26px;
+  border-bottom-right-radius: 26px;
   z-index: 10;
 }
 
@@ -447,7 +447,7 @@ a {
 }
 
 .account__card .account__table .account__body .account-row:not(:last-child) {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.348);
 }
 
 .account__card .account__table .account__body .account-row:nth-child(3) {
@@ -589,7 +589,7 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 10px;
-    margin-top: 270px;
+    margin-top: 200px;
   }
   .btn-wrapper a {
     width: 207px;
