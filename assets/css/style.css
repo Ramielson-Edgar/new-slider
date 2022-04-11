@@ -627,9 +627,9 @@ a {
   .icon-crypto::before,
   .icon-fiat::before,
   .icon-premium::before {
+    top: -10px;
+    left: 60%;
     height: 70px;
-    left: 65%;
-    top: -30px;
   }
   .owl-theme .owl-dots {
     margin-top: 40px !important;
