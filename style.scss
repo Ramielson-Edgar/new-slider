@@ -20,18 +20,13 @@ body {
   height: 100vh;
   line-height: 1.3;
 
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   margin: 0;
 }
 
 header,
 p {
   margin: 0;
-}
-
-.container {
-  width: 1140px;
-  margin: 0 auto;
 }
 
 .button-center {
@@ -60,9 +55,10 @@ a {
   align-items: center;
 }
 
-table {
-  margin: 0;
-  padding: 0;
+.account-carousel {
+  position: absolute;
+  left: 0;
+  z-index: -1;
 }
 
 // ICON BUTTON
@@ -177,56 +173,54 @@ table {
   position: relative;
 
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-direction: column;
   margin-right: auto;
-  width: 200px;
 
-  margin-top: 230px;
-  background-color: #ffffff;
+  top: 73px;
+  left: 0;
 
-  z-index: 3;
+  z-index: 2;
+
+  .info__item:nth-child(3) {
+    height: 85px;
+  }
+
+  .info__item:not(:last-child) {
+    border-bottom: 1px solid rgba(172, 172, 172, 0.459);
+  }
 
   .info__item {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
 
-    &::before {
-      position: absolute;
-      display: block;
-      content: "";
+    background: rgba(255, 255, 255, 0.89);
+    backdrop-filter: blur(100px);
 
-      top: 30px;
-      left: 0;
-
-      width: 100%;
-      height: 1px;
-
-      background-color: rgba(188, 188, 188, 0.3);
-      z-index: -1;
-    }
+    width: 180px;
+    padding: 15px 0;
   }
 
-  .info__item {
-    width: 210px;
-    padding: 10px;
-
-    .info__heading {
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: #000;
-    }
+  .info__heading {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
   }
 }
 
-
-
 .account__wrapper {
-padding-left: 90px;
+  padding-top: 100px;
+  margin-bottom: 180px;
 }
 
 .owl-carousel {
-padding-left: 200px;
+  padding-left: clamp(300px, 30%, 2rem);
+  transition: all 0.3s ease-in;
   z-index: 10;
 }
 
@@ -315,12 +309,14 @@ padding-left: 200px;
 
 .icon-standard::before {
   width: 140px;
+  left: 57%;
   z-index: 3;
   background-image: url("../../knife.png");
 }
 
 .icon-premium::before {
   width: 130px;
+  left: 57%;
   background-image: url("../../crown.png");
   z-index: 5;
 }
@@ -344,14 +340,13 @@ padding-left: 200px;
 
   display: flex;
   flex-direction: column;
-  flex-basis: 270px;
 
-  width: 270px;
-  height: 600px;
+  height: 100%;
 
-  border-radius: 50px;
+  border-radius: 30px;
   margin-top: 100px;
-  z-index: 1;
+
+  z-index: -1;
 
   &::before {
     position: absolute;
@@ -391,14 +386,14 @@ padding-left: 200px;
 
   .account__header {
     flex-grow: 1;
-    padding: 30px 30px;
+    padding: 20px;
   }
 
   .header-account,
   .header-card {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: clamp(1.25rem, calc(0.96rem + 1.46vw), 2rem);
     color: #34227b;
   }
 
@@ -408,9 +403,8 @@ padding-left: 200px;
   }
 
   .account__table {
-    position: relative;
-    height: 560px;
-    background: rgba(255, 255, 255, 0.85);
+    height: 480px;
+    background: rgba(255, 255, 255, 0.89);
     border-top: 2px solid #ffffff;
     box-sizing: border-box;
     backdrop-filter: blur(20px);
@@ -418,37 +412,45 @@ padding-left: 200px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 
-    padding: 10px 0 0 0;
-    z-index: 2;
-
     .account__body {
-      position: relative;
-      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
-      .account-row:not(:last-child) .account-value {
+      padding: 10px 20px;
+
+      list-style: none;
+      margin: 0;
+
+      .account-row:not(:last-child) {
         border-bottom: 1px solid #fff;
       }
       .account-row:nth-child(3) {
-        height: 74px;
+        height: 85px;
       }
-
       .account-row {
-        height: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        padding: 15px 0;
+
+        .account-header {
+          display: none;
+        }
 
         .account-value {
-          width: 60%;
-          font-weight: 500;
-          font-size: 1rem;
-          text-align: left;
+          font-size: 14px;
+          font-weight: 600;
           color: #34227b;
-          padding: 10px;
-
-          .mt4-logo {
-            width: 200px;
-          }
+          text-align: left;
 
           .allpips-logo {
-            width: 140px;
+            width: 70px;
+            height: 50px;
+          }
+          .mt4-logo {
+            width: 150px;
+            height: 40px;
           }
         }
       }
@@ -456,31 +458,153 @@ padding-left: 200px;
   }
 }
 
-
-
-@media (max-width: 767.98px) {
-  .icon-fiat::before {
-    left: 30%;
-  }
-  .icon-micro::before,
-  .icon-crypto::before {
-    left: 20%;
-  }
-
-  .owl-item > .slider-item {width: 377px;}
-}
-
-
-
-@media (max-width: 575.98px) {
-
-  .icon-micro::before,
-  .icon-crypto::before {left:32%;}
-
-   .icon-fiat::before {left: 30%;}
-
-  .icon-cent::before,
+@media (max-width: 1320px) {
   .icon-standard::before,
   .icon-premium::before,
-  .icon-pro::before {left: 35%;}
+  .icon-micro::before,
+  .icon-pro::before,
+  .icon-cent::before,
+  .icon-crypto::before,
+  .icon-fiat::before {
+    width: 40%;
+    height: 100px;
+  }
+
+  .account__card {
+    .account__header {
+      padding: 20px;
+
+      .header-card {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  .info__list {
+    top: 71px;
+  }
+}
+
+@media (max-width: 1198px) {
+  .icon-standard::before,
+  .icon-premium::before,
+  .icon-micro::before,
+  .icon-pro::before,
+  .icon-cent::before,
+  .icon-crypto::before,
+  .icon-fiat::before {
+    left: 60%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .account__card {
+    .account__table {
+      height: 600px;
+      .account__body {
+        .account-row {
+          .account-value {
+            padding: 10px 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .info__list {
+    top: 81px;
+    .info__item {
+      height: 69px;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .account__wrapper {
+    padding-top: 350px;
+  }
+}
+
+@media (max-width:657.98px) {
+    .info__list {
+      display: none;
+    }
+    
+    .account-carousel {
+      padding-left: 0px;
+    }
+    
+    .btn-wrapper {
+      padding-top: 250px;
+    }
+    
+    .account__card {
+      .account__table {
+        .account__body {
+          .account-row {
+            grid-template-columns: 100px 1fr;
+    
+            .account-header {
+              display: block;
+            }
+    
+            .account-value {
+              padding: 10px 0;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  
+}
+
+@media (max-width: 575px) {
+  .account__card {
+    .account__table {
+      height: 580px;
+      .account__body {
+        .account-row {
+          grid-template-columns: 1fr;
+          .account-header {
+            display: block;
+          }
+
+          .account-value {
+            padding: 10px 0;
+            text-align: left;
+          }
+
+          .account-header,
+          .account-value {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .btn-wrapper {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 270px;
+
+    a {width: 207px;}
+  }
+}
+
+@media (max-width:320px) {
+
+  .icon-standard::before,
+  .icon-micro::before,
+  .icon-pro::before,
+  .icon-cent::before,
+  .icon-crypto::before,
+  .icon-fiat::before,
+  .icon-premium::before {
+    height: 70px;
+    left: 65%;
+    top: -30px;
+  }
+  
 }

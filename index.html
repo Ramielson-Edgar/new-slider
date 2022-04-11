@@ -4,21 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <!--BOOTSTRAP-->
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    />
-
     <!--FONTS-->
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@700&family=Poppins:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="owl.carousel.min.css" />
+    <link rel="stylesheet" href="owl.theme.default.min.css" />
+
     <!--STYLE-->
     <link rel="stylesheet" href="assets/css/style.css" />
 
@@ -26,7 +27,7 @@
   </head>
 
   <body>
-    <div class="account__wrapper split">
+    <div class="account__wrapper container split">
       <ul class="nav info__list">
         <li class="info__item">
           <p class="info__heading">First Deposit</p>
@@ -53,192 +54,222 @@
           <p class="info__heading">Platform</p>
         </li>
       </ul>
-      <div class="owl-carousel owl-theme">
+
+      <div class="account-carousel owl-theme owl-carousel">
         <div class="slider-item">
-          <span class="icon-fiat"></span>
+          <span role="img" class="icon-fiat"></span>
           <div class="account__card fiat">
             <header class="account__header">
               <p class="header-card">Fiat</p>
               <p class="header-account">Account</p>
             </header>
 
-            <table class="account__table fiat-shadow">
-              <tbody class="account__body">
-                <tr class="account-row">
-                  <td class="account-value">100 USD/EUR</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value">Market Execution</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value">
+            <div class="account__table fiat-shadow">
+              <ul class="account__body">
+                <li class="account-row">
+                  <p class="account-header">First Deposit</p>
+                  <p class="account-value">100 USD/EUR</p>
+                </li>
+                <li class="account-row">
+                  <p class="account-header">Execution Type</p>
+                  <p class="account-value">Market Execution</p>
+                </li>
+                <li class="account-row">
+                  <p class="account-header">Instruments</p>
+                  <p class="account-value">
                     FX pairs, Stocks, Indices, Metals and Crypto
-                  </td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value">0.03</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value">0.01</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value">1:100</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value">Available</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value">
+                  </p>
+                </li>
+                <li class="account-row">
+                  <p class="account-header">Typical Spreads</p>
+                  <p class="account-value">0.03</p>
+                </li>
+                <li class="account-row">
+                  <p class="account-header">Min. Volume lots</p>
+                  <p class="account-value">0.01</p>
+                </li>
+                <li class="account-row">
+                  <p class="account-header">Max. Leverage</p>
+                  <p class="account-value">1:100</p>
+                </li>
+                <li class="account-row">
+                  <p class="account-header">Social Trading</p>
+                  <p class="account-value">Available</p>
+                </li>
+                <li class="account-row">
+                  <div class="account-value">
                     <img
                       class="allpips-logo"
                       src="./Logo.svg"
                       alt="logo company"
                       width="70"
-                      height="53"
+                      height="50"
                     />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <div class="slider-item">
-          <span class="icon-crypto"></span>
+          <span role="img" class="icon-crypto"></span>
           <div class="account__card crypto">
             <header class="account__header">
               <p class="header-card">Crypto</p>
               <p class="header-account">Account</p>
             </header>
 
-            <table class="account__table crypto-shadow">
-              <tbody class="account__body">
-                <tr class="account-row">
-                  <td class="account-value text-right">100 USD/EUR</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">Market Execution</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">
+            <div class="account__table crypto-shadow">
+              <ul class="account__body">
+                <li class="account-row">
+                   <p class="account-header">First Deposit</p>
+                  <p class="account-value text-right">100 USD/EUR</p>
+                </li>
+                <li class="account-row">
+                    <p class="account-header">Instruments</p>
+                  <p class="account-value text-right">Market Execution</p>
+                </li>
+                <li class="account-row">
+                    <p class="account-header">Typical Spreads</p>
+                  <p class="account-value text-right">
                     FX pairs, Stocks, Indices, Metals and Crypto
-                  </td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">0.03</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">0.01</td>
-                </tr>
+                  </p>
+                </li>
+                <li class="account-row">
+                   <p class="account-header">Min. Volume lots</p>
+                  <p class="account-value text-right">0.03</p>
+                </li>
+                <li class="account-row">
+                     <p class="account-header">Max. Volume lots</p>
+                  <p class="account-value text-right">0.01</p>
+                </li>
 
-                <tr class="account-row">
-                  <td class="account-value text-right">1:100</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value">Available</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">
+                <li class="account-row">
+                   <p class="account-header">Max. Leverage</p>
+                  <p class="account-value text-right">1:100</p>
+                </li>
+                <li class="account-row">
+                     <p class="account-header">Social Trading</p>
+                  <p class="account-value">Available</p>
+                </li>
+                <li class="account-row">
+                
+                  <div class="account-value text-right">
                     <img
                       class="allpips-logo"
                       src="./Logo.svg"
                       alt="logo company"
                       width="70"
-                      height="53"
+                      height="50"
                     />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <div class="slider-item">
-          <span class="icon-cent"></span>
+          <span role="img" class="icon-cent"></span>
           <div class="account__card cent">
             <header class="account__header">
               <p class="header-card">Cent</p>
               <p class="header-account">Account</p>
             </header>
 
-            <table class="account__table cent-shadow">
-              <tbody class="account__body">
-                <tr class="account-row">
-                  <td class="account-value text-right">100 USD/EUR</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">Market Execution</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">
+            <div class="account__table cent-shadow">
+              <ul class="account__body">
+                <li class="account-row">
+                    <p class="account-header">First Deposit</p>
+                  <p class="account-value text-right">100 USD/EUR</p>
+                </li>
+                <li class="account-row">
+                   <p class="account-header">Instruments</p>
+                  <p class="account-value text-right">Market Execution</p>
+                </li>
+                <li class="account-row">
+                    <p class="account-header">Typical Spreads</p>
+                  <p class="account-value text-right">
                     FX pairs, Stocks, Indices, Metals and Crypto
-                  </td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">0.03</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">0.01</td>
-                </tr>
+                  </p>
+                </li>
+                <li class="account-row">
+                     <p class="account-header">Min. Volume lots</p>
+                  <p class="account-value text-right">0.03</p>
+                </li>
+                <li class="account-row">
+                    <p class="account-header">Max. Leverage</p>
+                  <p class="account-value text-right">0.01</p>
+                </li>
 
-                <tr class="account-row">
-                  <td class="account-value text-right">1:100</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value">Available</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">
+                <li class="account-row">
+                      <p class="account-header">First Deposit</p>
+                  <p class="account-value text-right">1:100</p>
+                </li>
+                <li class="account-row">
+                  <p class="account-header">Social Trading</p>
+                  <p class="account-value">Available</td>
+                </li>
+                <li class="account-row">
+                  <div class="account-value text-right">
                     <img
                       class="allpips-logo"
                       src="./Logo.svg"
                       alt="logo company"
                       width="70"
-                      height="53"
+                      height="50"
                     />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <div class="slider-item">
-          <span class="icon-standard"></span>
+          <span role="img" class="icon-standard"></span>
           <div class="account__card standard">
             <header class="account__header">
               <p class="header-card">Standard</p>
               <p class="header-account">Account</p>
             </header>
 
-            <table class="account__table standard-shadow">
-              <tbody class="account__body">
-                <tr class="account-row">
-                  <td class="account-value text-right">100 USD/EUR</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">Market Execution</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">
+            <div class="account__table standard-shadow">
+              <ul class="account__body">
+                <li class="account-row">
+                   <p class="account-header">First Deposit</p>
+                  <p class="account-value text-right">100 USD/EUR</p>
+                </li>
+                <li class="account-row">
+                   <p class="account-header">Execution Type</p>
+                  <p class="account-value text-right">Market Execution</p>
+                </li>
+                <li class="account-row">
+                   <p class="account-header">Instruments</p>
+                  <p class="account-value text-right">
                     FX pairs, Stocks, Indices, Metals and Crypto
-                  </td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">1.2</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">0.01</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">1:500</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value">not Available</td>
-                </tr>
+                  </p>
+                </li>
+                <li class="account-row">
+                   <p class="account-header">Typical Spreads</p>
+                  <p class="account-value text-right">1.2</p>
+                </li>
+                <li class="account-row">
+                      <p class="account-header">Min. Volume lots</p>
+                  <p class="account-value text-right">0.01</p>
+                </li>
+                <li class="account-row">
+                    <p class="account-header">Min. Volume lots</p>
+                  <p class="account-value text-right">1:500</p>
+                </li>
+                <li class="account-row">
+                      <p class="account-header">Social Trading</p>
+                  <p class="account-value">not Available</p>
+                </li>
 
-                <tr class="account-row">
-                  <td class="account-value text-right">
+                <li class="account-row">
+                  <div class="account-value text-right">
                     <img
                       class="mt4-logo"
                       src="./mt4-logo.png"
@@ -246,48 +277,55 @@
                       width="70"
                       height="50"
                     />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <div class="slider-item">
-          <span class="icon-premium"></span>
+          <span role="img" class="icon-premium"></span>
           <div class="account__card premium">
             <header class="account__header">
               <p class="header-card">Premium</p>
               <p class="header-account">Account</p>
             </header>
 
-            <table class="account__table premium-shadow">
-              <tbody class="account__body">
-                <tr class="account-row">
-                  <td class="account-value text-right">2000 USD/EUR</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">Market Execution</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">
+            <div class="account__table premium-shadow">
+              <ul class="account__body">
+                <li class="account-row">
+                   <p class="account-header">First Deposit</p>
+                  <p class="account-value text-right">2000 USD/EUR</p>
+                </li>
+                <li class="account-row">
+                   <p class="account-header">Execution Type</p>
+                  <p class="account-value text-right">Market Execution</p>
+                </li>
+                <li class="account-row">
+                  <p class="account-header">Instruments</p>
+                  <p class="account-value text-right">
                     FX pairs, Stocks, Indices, Metals and Crypto
-                  </td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">0.4</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">0.01</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">1:500</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value">not Available</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">
+                  </p>
+                </li>
+                <li class="account-row">
+                  <p class="account-header">Typical Spreads</p>
+                  <p class="account-value text-right">0.4</p>
+                </li>
+                <li class="account-row">
+                   <p class="account-header">Min. Volume lots</p>
+                  <p class="account-value text-right">0.01</p>
+                </li>
+                <li class="account-row">
+                   <p class="account-header">Max. Leverage</p>
+                  <p class="account-value text-right">1:500</p>
+                </li>
+                <li class="account-row">
+                   <p class="account-header">Social Trading</p>
+                  <p class="account-value">not Available</p>
+                </li>
+                <li class="account-row">
+                  <div class="mt4 account-value text-right">
                     <img
                       class="mt4-logo"
                       src="./mt4-logo.png"
@@ -295,10 +333,10 @@
                       width="70"
                       height="50"
                     />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -310,33 +348,40 @@
               <p class="header-account">Account</p>
             </header>
 
-            <table class="account__table pro-shadow">
-              <tbody class="account__body">
-                <tr class="account-row">
-                  <td class="account-value text-right">10,000 USD/EUR</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">Market Execution</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">
+            <div class="account__table pro-shadow">
+              <ul class="account__body">
+                <li class="account-row">
+                    <p class="account-header">First Deposit</p>
+                  <p class="account-value text-right">10,000 USD/EUR</p>
+                </li>
+                <li class="account-row">
+                  <p class="account-header">Execution Type</p>
+                  <p class="account-value text-right">Market Execution</p>
+                </li>
+                <li class="account-row">
+                  <p class="account-header">Instruments</p>
+                  <p class="account-value text-right">
                     FX pairs, Stocks, Indices, Metals and Crypto
-                  </td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">0.3</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">0.01</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">1:500</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value">not Available</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">
+                  </p>
+                </li>
+                <li class="account-row">
+                    <p class="account-header">Typical Spreads</p>
+                  <p class="account-value text-right">0.3</p>
+                </li>
+                <li class="account-row">
+                   <p class="account-header">Min. Volume lots</p>
+                  <p class="account-value text-right">0.01</p>
+                </li>
+                <li class="account-row">
+                                 <p class="account-header">Max. Leverage</p>
+                  <p class="account-value text-right">1:500</p>
+                </li>
+                <li class="account-row">
+                   <p class="account-header">Social Trading</p>
+                  <p class="account-value">not Available</p>
+                </li>
+                <li class="account-row">
+                  <div class="account-value text-right">
                     <img
                       class="mt4-logo"
                       src="./mt4-logo.png"
@@ -344,10 +389,10 @@
                       width="70"
                       height="50"
                     />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -359,31 +404,38 @@
               <p class="header-account">Account</p>
             </header>
 
-            <table class="account__table micro-shadow">
-              <tbody class="account__body">
-                <tr class="account-row">
-                  <td class="account-value text-right">25 USD</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">Market Execution</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">FX pairs and Metals</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">2.0</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">0.0001</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">1:500</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value">not Available</td>
-                </tr>
-                <tr class="account-row">
-                  <td class="account-value text-right">
+            <div class="account__table micro-shadow">
+              <ul class="account__body">
+                <li class="account-row">
+                   <p class="account-header">First Deposit</p>
+                  <p class="account-value text-right">25 USD</p>
+                </li>
+                <li class="account-row">
+                  <p class="account-header">Execution Type</p>
+                  <p class="account-value text-right">Market Execution</p>
+                </li>
+                <li class="account-row">
+                  <p class="account-header">Instruments</p>
+                  <p class="account-value text-right">FX pairs and Metals</p>
+                </li>
+                <li class="account-row">
+                    <p class="account-header">Typical Spreads</p>
+                  <p class="account-value text-right">2.0</p>
+                </li>
+                <li class="account-row">
+                         <p class="account-header">Min. Volume lots</p>
+                  <p class="account-value text-right">0.0001</p>
+                </li>
+                <li class="account-row">
+                   <p class="account-header">Max. Leverage</p>
+                  <p class="account-value text-right">1:500</p>
+                </li>
+                <li class="account-row">
+                  <p class="account-header">Social Trading</p>
+                  <p class="account-value">not Available</p>
+                </li>
+                <li class="account-row">
+                  <div class="account-value text-right">
                     <img
                       class="mt4-logo"
                       src="./mt4-logo.png"
@@ -391,69 +443,69 @@
                       width="70"
                       height="50"
                     />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <div class="btn-wrapper">
-      <a class="btn-orange base-btn" href="#">Open Trading Account</a>
-      <a class="btn-green base-btn" href="#">Open Demo Account</a>
+     <a href="#" class="base-btn btn-orange">Open Trading Account</a>
+    <a href="#" class=" btn-green  base-btn">Open Demo Account</a>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="owl.carousel.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/owl.carousel.min.js"></script>
+
     <script>
       $(document).ready(function () {
-        $(".owl-carousel").owlCarousel({
-          nav: true,
-          dots: true,
+        $(".account-carousel").owlCarousel({
           loop: false,
-          rewind: true,
-          //autoWidth: true,
-          stagePadding: 0,
-          margin: 60,
-          checkVisibility: true,
-          navElement: "div",
+          margin: 10,
+          nav: false,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          autoplayHoverPause: true,
+          stagePadding: 50,
+          URLhashListener: true,
+          autoplayHoverPause: true,
+          startPosition: "URLHash",
           responsive: {
             0: {
               items: 1,
-              slideBy: 1,
             },
-
             575: {
               items: 1,
-              slideBy: 1,
             },
-
             768: {
+              items:1,
+            },
+            886: {
               items: 2,
-              slideBy: 2,
-              autoWidth: true,
             },
             991: {
-              items: 3,
-              slideBy: 3,
-              autoWidth: true,
+              items: 2,
             },
-            1024: {
-              items: 3,
-              slideBy: 3,
-              autoWidth: true,
-              margin: 20,
+            1000: {
+              items: 2,
             },
-            1280: {
-              items: 4,
-              slideBy: 4,
-            },
-            1440: {
+            1198: {
               items: 3,
-              autoWidth: true,
-              margin: 30,
             },
           },
         });

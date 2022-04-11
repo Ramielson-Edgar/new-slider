@@ -21,18 +21,13 @@ body {
   font-size: 14px;
   height: 100vh;
   line-height: 1.3;
-  background-color: #fff;
+  background-color: white;
   margin: 0;
 }
 
 header,
 p {
   margin: 0;
-}
-
-.container {
-  width: 1140px;
-  margin: 0 auto;
 }
 
 .button-center {
@@ -67,9 +62,10 @@ a {
           align-items: center;
 }
 
-table {
-  margin: 0;
-  padding: 0;
+.account-carousel {
+  position: absolute;
+  left: 0;
+  z-index: -1;
 }
 
 .fiat {
@@ -187,56 +183,68 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-right: auto;
-  width: 200px;
-  margin-top: 230px;
-  background-color: #ffffff;
-  z-index: 3;
+  top: 73px;
+  left: 0;
+  z-index: 2;
+}
+
+.info__list .info__item:nth-child(3) {
+  height: 85px;
+}
+
+.info__list .info__item:not(:last-child) {
+  border-bottom: 1px solid rgba(172, 172, 172, 0.459);
 }
 
 .info__list .info__item {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.89);
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
+  width: 180px;
+  padding: 15px 0;
 }
 
-.info__list .info__item::before {
-  position: absolute;
-  display: block;
-  content: "";
-  top: 30px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: rgba(188, 188, 188, 0.3);
-  z-index: -1;
-}
-
-.info__list .info__item {
-  width: 210px;
-  padding: 10px;
-}
-
-.info__list .info__item .info__heading {
-  font-size: 1.2rem;
+.info__list .info__heading {
+  font-size: 14px;
   font-weight: 500;
   color: #000;
 }
 
 .account__wrapper {
-  padding-left: 90px;
+  padding-top: 100px;
+  margin-bottom: 180px;
 }
 
 .owl-carousel {
-  padding-left: 200px;
+  padding-left: clamp(300px, 30%, 2rem);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
   z-index: 10;
 }
 
@@ -325,12 +333,14 @@ table {
 
 .icon-standard::before {
   width: 140px;
+  left: 57%;
   z-index: 3;
   background-image: url("../../knife.png");
 }
 
 .icon-premium::before {
   width: 130px;
+  left: 57%;
   background-image: url("../../crown.png");
   z-index: 5;
 }
@@ -358,13 +368,10 @@ table {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-preferred-size: 270px;
-      flex-basis: 270px;
-  width: 270px;
-  height: 600px;
-  border-radius: 50px;
+  height: 100%;
+  border-radius: 30px;
   margin-top: 100px;
-  z-index: 1;
+  z-index: -1;
 }
 
 .account__card::before {
@@ -400,14 +407,14 @@ table {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding: 30px 30px;
+  padding: 20px;
 }
 
 .account__card .header-account,
 .account__card .header-card {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: clamp(1.25rem, calc(0.96rem + 1.46vw), 2rem);
   color: #34227b;
 }
 
@@ -417,9 +424,8 @@ table {
 }
 
 .account__card .account__table {
-  position: relative;
-  height: 560px;
-  background: rgba(255, 255, 255, 0.85);
+  height: 480px;
+  background: rgba(255, 255, 255, 0.89);
   border-top: 2px solid #ffffff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -427,70 +433,185 @@ table {
           backdrop-filter: blur(20px);
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  padding: 10px 0 0 0;
-  z-index: 2;
 }
 
 .account__card .account__table .account__body {
-  position: relative;
-  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 20px;
+  list-style: none;
+  margin: 0;
 }
 
-.account__card .account__table .account__body .account-row:not(:last-child) .account-value {
+.account__card .account__table .account__body .account-row:not(:last-child) {
   border-bottom: 1px solid #fff;
 }
 
 .account__card .account__table .account__body .account-row:nth-child(3) {
-  height: 74px;
+  height: 85px;
 }
 
 .account__card .account__table .account__body .account-row {
-  height: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0;
+}
+
+.account__card .account__table .account__body .account-row .account-header {
+  display: none;
 }
 
 .account__card .account__table .account__body .account-row .account-value {
-  width: 60%;
-  font-weight: 500;
-  font-size: 1rem;
-  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
   color: #34227b;
-  padding: 10px;
-}
-
-.account__card .account__table .account__body .account-row .account-value .mt4-logo {
-  width: 200px;
+  text-align: left;
 }
 
 .account__card .account__table .account__body .account-row .account-value .allpips-logo {
-  width: 140px;
+  width: 70px;
+  height: 50px;
+}
+
+.account__card .account__table .account__body .account-row .account-value .mt4-logo {
+  width: 150px;
+  height: 40px;
+}
+
+@media (max-width: 1320px) {
+  .icon-standard::before,
+  .icon-premium::before,
+  .icon-micro::before,
+  .icon-pro::before,
+  .icon-cent::before,
+  .icon-crypto::before,
+  .icon-fiat::before {
+    width: 40%;
+    height: 100px;
+  }
+  .account__card .account__header {
+    padding: 20px;
+  }
+  .account__card .account__header .header-card {
+    font-size: 1.8rem;
+  }
+  .info__list {
+    top: 71px;
+  }
+}
+
+@media (max-width: 1198px) {
+  .icon-standard::before,
+  .icon-premium::before,
+  .icon-micro::before,
+  .icon-pro::before,
+  .icon-cent::before,
+  .icon-crypto::before,
+  .icon-fiat::before {
+    left: 60%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .account__card .account__table {
+    height: 600px;
+  }
+  .account__card .account__table .account__body .account-row .account-value {
+    padding: 10px 20px;
+  }
+  .info__list {
+    top: 81px;
+  }
+  .info__list .info__item {
+    height: 69px;
+  }
 }
 
 @media (max-width: 767.98px) {
-  .icon-fiat::before {
-    left: 30%;
-  }
-  .icon-micro::before,
-  .icon-crypto::before {
-    left: 20%;
-  }
-  .owl-item > .slider-item {
-    width: 377px;
+  .account__wrapper {
+    padding-top: 350px;
   }
 }
 
-@media (max-width: 575.98px) {
-  .icon-micro::before,
-  .icon-crypto::before {
-    left: 32%;
+@media (max-width: 657.98px) {
+  .info__list {
+    display: none;
   }
-  .icon-fiat::before {
-    left: 30%;
+  .account-carousel {
+    padding-left: 0px;
   }
-  .icon-cent::before,
+  .btn-wrapper {
+    padding-top: 250px;
+  }
+  .account__card .account__table .account__body .account-row {
+    -ms-grid-columns: 100px 1fr;
+        grid-template-columns: 100px 1fr;
+  }
+  .account__card .account__table .account__body .account-row .account-header {
+    display: block;
+  }
+  .account__card .account__table .account__body .account-row .account-value {
+    padding: 10px 0;
+    text-align: right;
+  }
+}
+
+@media (max-width: 575px) {
+  .account__card .account__table {
+    height: 580px;
+  }
+  .account__card .account__table .account__body .account-row {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .account__card .account__table .account__body .account-row .account-header {
+    display: block;
+  }
+  .account__card .account__table .account__body .account-row .account-value {
+    padding: 10px 0;
+    text-align: left;
+  }
+  .account__card .account__table .account__body .account-row .account-header,
+  .account__card .account__table .account__body .account-row .account-value {
+    padding: 0;
+  }
+  .btn-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    margin-top: 270px;
+  }
+  .btn-wrapper a {
+    width: 207px;
+  }
+}
+
+@media (max-width: 320px) {
   .icon-standard::before,
-  .icon-premium::before,
-  .icon-pro::before {
-    left: 35%;
+  .icon-micro::before,
+  .icon-pro::before,
+  .icon-cent::before,
+  .icon-crypto::before,
+  .icon-fiat::before,
+  .icon-premium::before {
+    height: 70px;
+    left: 65%;
+    top: -30px;
   }
 }
 /*# sourceMappingURL=style.css.map */
