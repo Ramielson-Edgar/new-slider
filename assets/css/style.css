@@ -617,9 +617,6 @@ a {
   .btn-wrapper a {
     width: 207px;
   }
-  .owl-nav {
-    top: 30%;
-  }
 }
 
 @media (max-width: 320px) {
@@ -634,11 +631,8 @@ a {
     left: 65%;
     top: -30px;
   }
-  .btn-wrapper > a {
-    margin: 10px;
-  }
   .owl-theme .owl-dots {
-    margin-top: 30px;
+    margin-top: 40px !important;
   }
 }
 
