@@ -200,7 +200,7 @@
 }
 .bi-arrow-right-short::before,
 .bi-arrow-left-short::before {
-   margin: 5px;
+    margin: 5px;
 }
 
 .bi-arrow-right-short {
@@ -220,10 +220,13 @@
     border-radius: 50%;
     background-color: #1fd09b;
     box-shadow: 10px 10px 50px -10px #1fd09b;
-    transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
 }
 .bi:hover {
-    transform: scale(.8);
+    transform: scale(0.8);
 }
 
-.owl-dots {margin-top: 40px !important;}
+.owl-dots {
+    margin-top: 40px !important;
+    margin-right: 300px;
+}

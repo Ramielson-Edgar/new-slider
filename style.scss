@@ -235,7 +235,7 @@ a {
 }
 
 .slider-item:hover .account__card {
-  box-shadow: 30px 3px 50px -40px rgb(116, 116, 116);
+  box-shadow: 30px 3px 50px -40px rgb(207, 207, 207);
 }
 
 .icon-standard::after,
@@ -261,7 +261,7 @@ a {
   transform: translate(-50% -50%);
 
   width: 120px;
-  height: 120px;
+  height: 100px;
 
   background-repeat: no-repeat;
   background-position: center;
@@ -307,9 +307,9 @@ a {
 }
 
 .icon-crypto::before {
-  width: 150px;
-  height: 120px;
-  left: 45%;
+  width: 120px;
+  height: 100px;
+  left: 50%;
 
   background-image: url("../../icon-crypto.png");
 }
@@ -341,7 +341,7 @@ a {
 
 .icon-pro::before {
   width: 120px;
-  height: 120px;
+  height: 100px;
   z-index: 3;
   background-image: url("../../helm.png");
 }
@@ -574,6 +574,11 @@ a {
   .bi-arrow-left-short {
     left: 0;
   }
+
+  .owl-dots {
+
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 575px) {
@@ -620,6 +625,9 @@ a {
       margin: 0 auto;
     }
   }
+    .account__wrapper {
+      padding-top: 380px;
+    }
 }
 
 @media (max-width: 320px) {
@@ -636,6 +644,7 @@ a {
     left: 50%;
     top: -3%;
   }
+
 
 }
 
